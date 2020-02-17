@@ -33,7 +33,7 @@ if(m.isPost() && f.validate()) {
 }
 
 //Step4
-p.setDebug(out);
+//p.setDebug(out);
 p.setLayout("blog");
 p.setBody("sample.create");
 p.setVar("form_script", f.getScript());

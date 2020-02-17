@@ -23,7 +23,7 @@ while(list.next()) {
 }
 
 //Step4
-p.setDebug(out);
+//p.setDebug(out);
 p.setLayout("blog");
 p.setBody("sample/index");
 p.setVar("list", list);
