@@ -22,6 +22,13 @@ if(m.isPost() && f.validate()) {
 	blog.item("subject", f.get("subject"));
 	blog.item("content", f.get("content"));
 
+	if("Y".equals(f.get("att_file_del"))) {
+		blog.item("att_file_name", "");
+		blog.item("att_file_code", "");
+		info.put("att_file_code", "");
+		m.delFile(f.uploadDir + "/" + info.s("att_file_code"));
+	}
+	
 	File attFile = f.saveFile("att_file");
 	if(attFile != null) {
 		blog.item("att_file_name", f.getFileName("att_file"));
