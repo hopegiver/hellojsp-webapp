@@ -7,7 +7,7 @@
     SELECT * FROM tb_blog WHERE id = #{id}
   </select>
   <select id="selectAll" resultType="hashmap">
-    SELECT id, subject, content, reg_date, status FROM tb_blog
+    SELECT id, subject, content, reg_date, status FROM tb_blog ORDER BY id DESC LIMIT 10
   </select>
   <insert id="insert" parameterType="hashmap">
   	INSERT INTO tb_blog (subject, content, reg_date)
